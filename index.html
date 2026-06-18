@@ -7,71 +7,142 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- ===== NAVBAR ===== -->
     <nav class="navbar glass">
         <div class="logo-container">
             <img src="img/logo.png" alt="Logo COBACH 77" class="nav-logo">
             <span class="logo-text">COBACH 77</span>
         </div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#instalaciones">Instalaciones</a></li>
             <li><a href="#oferta">Oferta Educativa</a></li>
+            <li><a href="#equipo">Nuestro Equipo</a></li>
             <li><button class="btn js-btn btn-nav" id="openInscripciones">Inscripciones 🚀</button></li>
         </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 
+    <!-- ===== HERO ===== -->
     <header id="inicio" class="hero">
         <canvas id="rainCanvas"></canvas>
+        <canvas id="particlesCanvas"></canvas>
         
         <div class="hero-content glass" id="heroCard">
             <span class="badge">Plantel José María Pino Suárez, Chiapas</span>
-            <h1>Construye tu futuro hoy</h1>
+            <h1 id="typingText">Construye tu futuro hoy</h1>
             <p>Formación académica de excelencia, deportes, cultura y el mejor ambiente estudiantil te esperan.</p>
             <button class="btn js-btn action-btn" id="heroActionBtn">¡Inscríbete Ahora!</button>
         </div>
     </header>
 
+    <!-- ===== ESTADÍSTICAS ===== -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-target="850">0</div>
+                <p>Estudiantes</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="45">0</div>
+                <p>Docentes</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="15">0</div>
+                <p>Talleres y Clubes</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="100">0</div>
+                <p>% de Egresados exitosos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INSTALACIONES (CARRUSEL) ===== -->
     <section id="instalaciones" class="section">
         <h2>Nuestras Áreas e Instalaciones</h2>
         <p class="subtitle">Haz <strong>doble clic</strong> en cualquier imagen para verla en pantalla completa.</p>
         
         <div class="carousel-3d-wrapper">
             <div class="carousel-3d-container">
+                <!-- 1. Aulas de Clases -->
                 <div class="carousel-3d-item">
                     <img src="img/salon1.jpg" alt="Aulas" class="carousel-img">
                     <div class="carousel-caption">Aulas de Clases</div>
                 </div>
+                <!-- 2. Salón de Ciencias -->
                 <div class="carousel-3d-item">
                     <img src="img/salon5.jpg" alt="Aulas" class="carousel-img">
                     <div class="carousel-caption">Salón de Ciencias</div>
                 </div>
+                <!-- 3. Dirección Escolar -->
                 <div class="carousel-3d-item">
                     <img src="img/direccion.jpg" alt="Dirección Escolar" class="carousel-img">
                     <div class="carousel-caption">Dirección Escolar</div>
                 </div>
+                <!-- 4. Centro de Cómputo -->
                 <div class="carousel-3d-item">
                     <img src="img/compu1.jpg" alt="Cómputo" class="carousel-img">
-                    <div class="carousel-caption">Aula de Cómputo</div>
+                    <div class="carousel-caption">Centro de Cómputo</div>
                 </div>
+                <!-- 5. Cancha Deportiva -->
                 <div class="carousel-3d-item">
                     <img src="img/cancha1.jpg" alt="Deportes" class="carousel-img">
-                    <div class="carousel-caption">Cancha recreativa (Fútbol y Básquetbol)</div>
+                    <div class="carousel-caption">Cancha Deportiva (Fútbol y Básquetbol)</div>
                 </div>
+                <!-- 6. Biblioteca -->
                 <div class="carousel-3d-item">
                     <img src="img/Biblio.jpg" alt="Biblioteca" class="carousel-img">
                     <div class="carousel-caption">Biblioteca y Zona de Estudio</div>
                 </div>
+                <!-- 7. Áreas Verdes -->
                 <div class="carousel-3d-item">
                     <img src="img/AreVerd.jpg" alt="Explanada" class="carousel-img">
                     <div class="carousel-caption">Áreas Verdes</div>
                 </div>
+                <!-- 8. Campo Deportivo -->
                 <div class="carousel-3d-item">
                     <img src="img/campo.jpg" alt="Campo" class="carousel-img">
                     <div class="carousel-caption">Campo Deportivo</div>
                 </div>
+                <!-- 9. Clubes Deportivos -->
                 <div class="carousel-3d-item">
                     <img src="img/deportes.jpg" alt="Clubes" class="carousel-img">
                     <div class="carousel-caption">Clubes Deportivos</div>
+                </div>
+                <!-- 10. Sala Audiovisual -->
+                <div class="carousel-3d-item">
+                    <img src="img/av1.jpg" alt="Sala Audiovisual" class="carousel-img">
+                    <div class="carousel-caption">Sala Audiovisual</div>
+                </div>
+                <!-- 11. Centro de Juntas -->
+                <div class="carousel-3d-item">
+                    <img src="img/centrojun.jpg" alt="Sala de Profesores" class="carousel-img">
+                    <div class="carousel-caption">Centro de Juntas / Sala de Profesores</div>
+                </div>
+                <!-- 12. Control Escolar -->
+                <div class="carousel-3d-item">
+                    <img src="img/ctrlesco.jpg" alt="Control Escolar" class="carousel-img">
+                    <div class="carousel-caption">Control Escolar</div>
+                </div>
+                <!-- 13. Orientación -->
+                <div class="carousel-3d-item">
+                    <img src="img/orient.jpg" alt="Orientación" class="carousel-img">
+                    <div class="carousel-caption">Departamento de Orientación</div>
+                </div>
+                <!-- 14. Cafetería -->
+                <div class="carousel-3d-item">
+                    <img src="img/cafeteria.jpg" alt="Cafetería" class="carousel-img">
+                    <div class="carousel-caption">Cafetería</div>
+                </div>
+                <!-- 15. Domo -->
+                <div class="carousel-3d-item">
+                    <img src="img/domo.jpg" alt="Domo" class="carousel-img">
+                    <div class="carousel-caption">Domo</div>
                 </div>
             </div>
             <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
@@ -79,41 +150,39 @@
         </div>
     </section>
 
+    <!-- ===== MODAL IMAGEN ===== -->
     <div id="imageModal" class="modal">
         <span class="close-modal">&times;</span>
         <img class="modal-content" id="fullImage" alt="Vista completa">
     </div>
 
+    <!-- ===== OFERTA EDUCATIVA (ZIGZAG) ===== -->
     <section id="oferta" class="section alt-bg">
         <h2>Lo que tenemos para ti</h2>
         <p class="subtitle">Desarróllate en tus áreas favoritas y oportunidades de la actualidad.</p>
         
         <div class="zigzag-container">
-            <div class="zigzag-card">
+            <div class="zigzag-card" data-aos="fade-right">
                 <div class="circular-img-container">
                     <img src="img/compu1.jpg" alt="Informática">
                 </div>
                 <div class="zigzag-text">
                     <h3>Capacitación en Informática</h3>
-                    <p>A los estudiantes no concientes de las neuvas TICs, aprede los principios básicos y avanzados de la informática y ofimatica, lo que te
-                         permitirá ganar expresividad digital y habilidades tecnológicas esenciales para la continuación de tu desarrollo estudiantil y profesional.
-                    </p>
+                    <p>A los estudiantes no concientes de las nuevas TICs, aprende los principios básicos y avanzados de la informática y ofimática, lo que te permitirá ganar expresividad digital y habilidades tecnológicas esenciales para la continuación de tu desarrollo estudiantil y profesional.</p>
                 </div>
             </div>
 
-            <div class="zigzag-card">
+            <div class="zigzag-card" data-aos="fade-left">
                 <div class="circular-img-container">
                     <img src="img/natura.jpg" alt="Contabilidad">
                 </div>
                 <div class="zigzag-text">
                     <h3>Actividades recreativas</h3>
-                    <p>Es bueno centrarse en las nuevas tecnologías, pero tambien el algo bueno prestar atención a lo natural.
-                        Disfruta de nuestras áreas verdes, espacios de convivencia y actividades al aire libre. ¡Un respiro para tu mente y cuerpo!
-                    </p>
+                    <p>Es bueno centrarse en las nuevas tecnologías, pero también es bueno prestar atención a lo natural. Disfruta de nuestras áreas verdes, espacios de convivencia y actividades al aire libre. ¡Un respiro para tu mente y cuerpo!</p>
                 </div>
             </div>
 
-            <div class="zigzag-card">
+            <div class="zigzag-card" data-aos="fade-right">
                 <div class="circular-img-container">
                     <img src="img/deportes.jpg" alt="Deportes">
                 </div>
@@ -123,17 +192,17 @@
                 </div>
             </div>
 
-            <div class="zigzag-card">
+            <div class="zigzag-card" data-aos="fade-left">
                 <div class="circular-img-container">
                     <img src="img/cultura.jpg" alt="Cultura">
                 </div>
                 <div class="zigzag-text">
                     <h3>Talleres Culturales</h3>
-                    <p>Explora tu lado creativo en los talleres de danza folclórica, música, telleres recreativos, entre otros. Fomentamos nuestras tradiciones.</p>
+                    <p>Explora tu lado creativo en los talleres de danza folclórica, música, talleres recreativos, entre otros. Fomentamos nuestras tradiciones.</p>
                 </div>
             </div>
 
-            <div class="zigzag-card">
+            <div class="zigzag-card" data-aos="fade-right">
                 <div class="circular-img-container">
                     <img src="img/docentes.jpg" alt="Orientación">
                 </div>
@@ -145,62 +214,213 @@
         </div>
     </section>
 
+    <!-- ===== NUEVA SECCIÓN: NUESTRO EQUIPO ===== -->
+    <section id="equipo" class="section team-section">
+        <h2>🌟 Nuestro Equipo Directivo</h2>
+        <p class="subtitle">Conoce a las personas que hacen posible la excelencia educativa en el COBACH 77.</p>
+        
+        <div class="team-container">
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="https://imgs.search.brave.com/fToVZWVr7G_R-vGMA_Djc4cD88wi05CewZRbLKxTLwg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb2Jh/Y2guc29ub3JhLmVk/dS5teC9pbWFnZXMv/bGFmdS9kaXItbGFm/dS5qcGc" alt="Director">
+                </div>
+                <div class="team-info">
+                    <h3>Mtro. Alejandro Méndez</h3>
+                    <p class="team-role">Director del Plantel</p>
+                    <p class="team-desc">Líder educativo con más de 20 años de experiencia en la formación de jóvenes.</p>
+                    <div class="team-social">
+                        <a href="#">📧</a>
+                        <a href="#">📱</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="https://imgs.search.brave.com/omb7f88e73j5QBUniL_D7fq4q-vG05gKpLpUCQByQVc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb2Jh/Y2guc29ub3JhLmVk/dS5teC9pbWFnZXMv/ZGlyZWN0b3Jpby9k/aXJlY2Npb252aW5j/dWxhY2lvbi5qcGc" alt="Subdirector">
+                </div>
+                <div class="team-info">
+                    <h3>Lic. Patricia Gómez</h3>
+                    <p class="team-role">Subdirectora Académica</p>
+                    <p class="team-desc">Apasionada por la innovación educativa y el desarrollo integral de los estudiantes.</p>
+                    <div class="team-social">
+                        <a href="#">📧</a>
+                        <a href="#">📱</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="https://imgs.search.brave.com/RqZUDx9fXwkXvfrWbmbBDzlOZogkJ7P5egj0477q0qE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb2Jh/Y2guc29ub3JhLmdv/Yi5teC9pbWFnZXMv/Y2FsaWZvcm5pYS9z/dWJkaXItY2FsaWZv/cm5pYS5qcGc" alt="Orientador">
+                </div>
+                <div class="team-info">
+                    <h3>Psic. Carlos Ruiz</h3>
+                    <p class="team-role">Departamento de Orientación</p>
+                    <p class="team-desc">Comprometido con el bienestar emocional y el acompañamiento psicopedagógico.</p>
+                    <div class="team-social">
+                        <a href="#">📧</a>
+                        <a href="#">📱</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODAL FORMULARIO MEJORADO ===== -->
     <div id="inscripcionesModal" class="modal-form-overlay">
         <div class="modal-form-box glass">
             <span class="close-form-btn" id="closeInscripciones">&times;</span>
+            
+            <!-- Icono de escuela -->
+            <div class="form-header-icon">🎓</div>
             <h3>Formulario de Pre-Inscripción</h3>
             <p class="form-desc">Completa tus datos para apartar tu lugar en el ciclo escolar 2026-2027.</p>
             
+            <!-- Barra de progreso -->
+            <div class="form-progress">
+                <div class="progress-step active" data-step="1">1</div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">2</div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">3</div>
+            </div>
+            
             <form id="formInscripcion">
-                <fieldset>
-                    <legend>Datos del Estudiante</legend>
-                    <div class="input-group">
-                        <label for="nombre">Nombre Completo:</label>
-                        <input type="text" id="nombre" required placeholder="Ej. Juan Pérez López">
-                    </div>
-                    <div class="input-grid">
+                <!-- PASO 1: Datos Personales -->
+                <div class="form-step active" data-step="1">
+                    <fieldset>
+                        <legend>📋 Datos del Estudiante</legend>
                         <div class="input-group">
-                            <label for="curp">CURP:</label>
-                            <input type="text" id="curp" required placeholder="18 caracteres" maxlength="18">
+                            <label for="nombre">
+                                <span class="input-icon">👤</span> Nombre Completo:
+                            </label>
+                            <input type="text" id="nombre" required placeholder="Ej. Juan Pérez López">
+                            <span class="input-feedback"></span>
                         </div>
-                        <div class="input-group">
-                            <label for="secundaria">Secundaria de Procedencia:</label>
-                            <input type="text" id="secundaria" required placeholder="Nombre de tu escuela">
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label for="curp">
+                                    <span class="input-icon">🆔</span> CURP:
+                                </label>
+                                <input type="text" id="curp" required placeholder="18 caracteres" maxlength="18">
+                                <span class="input-feedback"></span>
+                            </div>
+                            <div class="input-group">
+                                <label for="secundaria">
+                                    <span class="input-icon">🏫</span> Secundaria de Procedencia:
+                                </label>
+                                <input type="text" id="secundaria" required placeholder="Nombre de tu escuela">
+                                <span class="input-feedback"></span>
+                            </div>
                         </div>
-                    </div>
-                </fieldset>
+                    </fieldset>
+                    <button type="button" class="btn next-step-btn">Siguiente →</button>
+                </div>
 
-                <fieldset>
-                    <legend>Derecho a Examen y Ficha de Pago</legend>
-                    <div class="payment-info">
-                        <p><strong>Costo de la ficha:</strong> $350.00 MXN</p>
-                        <p class="note">⚠️ Llena los campos correspondientes.</p>
-                    </div>
-                    <div class="input-group">
-                        <label for="cardname">Nombre del Titular de la Tarjeta:</label>
-                        <input type="text" id="cardname" required placeholder="Como aparece en la tarjeta">
-                    </div>
-                    <div class="input-group">
-                        <label for="cardnumber">Número de Tarjeta:</label>
-                        <input type="text" id="cardnumber" required placeholder="0000 0000 0000 0000" maxlength="19">
-                    </div>
-                    <div class="input-grid">
-                        <div class="input-group">
-                            <label for="exp">Fecha de Expiración:</label>
-                            <input type="text" id="exp" required placeholder="MM/AA" maxlength="5">
+                <!-- PASO 2: Datos de Pago -->
+                <div class="form-step" data-step="2">
+                    <fieldset>
+                        <legend>💳 Derecho a Examen y Ficha de Pago</legend>
+                        <div class="payment-info">
+                            <p><strong>Costo de la ficha:</strong> $350.00 MXN</p>
+                            <p class="note">⚠️ Llena los campos correspondientes.</p>
                         </div>
                         <div class="input-group">
-                            <label for="cvv">CVV:</label>
-                            <input type="password" id="cvv" required placeholder="123" maxlength="3">
+                            <label for="cardname">
+                                <span class="input-icon">💳</span> Nombre del Titular:
+                            </label>
+                            <input type="text" id="cardname" required placeholder="Como aparece en la tarjeta">
+                            <span class="input-feedback"></span>
                         </div>
+                        <div class="input-group">
+                            <label for="cardnumber">
+                                <span class="input-icon">🔢</span> Número de Tarjeta:
+                            </label>
+                            <input type="text" id="cardnumber" required placeholder="0000 0000 0000 0000" maxlength="19">
+                            <span class="input-feedback"></span>
+                        </div>
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label for="exp">
+                                    <span class="input-icon">📅</span> Fecha de Expiración:
+                                </label>
+                                <input type="text" id="exp" required placeholder="MM/AA" maxlength="5">
+                                <span class="input-feedback"></span>
+                            </div>
+                            <div class="input-group">
+                                <label for="cvv">
+                                    <span class="input-icon">🔒</span> CVV:
+                                </label>
+                                <input type="password" id="cvv" required placeholder="123" maxlength="3">
+                                <span class="input-feedback"></span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-nav-buttons">
+                        <button type="button" class="btn prev-step-btn">← Atrás</button>
+                        <button type="button" class="btn next-step-btn">Siguiente →</button>
                     </div>
-                </fieldset>
+                </div>
 
-                <button type="submit" class="btn js-btn submit-form-btn">Procesar Registro y Pago 💳</button>
+                <!-- PASO 3: Confirmación -->
+                <div class="form-step" data-step="3">
+                    <div class="confirm-section">
+                        <div class="confirm-icon">✅</div>
+                        <h4>¡Revisa tus datos!</h4>
+                        <p class="confirm-text">Antes de finalizar, verifica que toda la información sea correcta.</p>
+                        <div class="confirm-data" id="confirmData">
+                            <p><strong>Nombre:</strong> <span id="confirmNombre">-</span></p>
+                            <p><strong>CURP:</strong> <span id="confirmCURP">-</span></p>
+                            <p><strong>Secundaria:</strong> <span id="confirmSecundaria">-</span></p>
+                            <p><strong>Tarjeta:</strong> <span id="confirmTarjeta">-</span></p>
+                        </div>
+                    </div>
+                    <div class="form-nav-buttons">
+                        <button type="button" class="btn prev-step-btn">← Atrás</button>
+                        <button type="submit" class="btn js-btn submit-form-btn">
+                            <span class="btn-text">Procesar Registro y Pago 💳</span>
+                            <span class="btn-loader" style="display:none;">⏳</span>
+                        </button>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
 
+    <!-- ===== MODAL DE ÉXITO (MEJORADO) ===== -->
+    <div id="successModal" class="success-modal">
+        <div class="success-content">
+            <div class="success-icon">🎉</div>
+            <h2>¡Inscripción Exitosa!</h2>
+            <div class="success-message">
+                <p id="successNombre">Juan Pérez</p>
+                <p>Tu registro ha sido procesado exitosamente.</p>
+                <div class="success-details">
+                    <div class="success-detail-item">
+                        <span>📋</span>
+                        <span>Ficha de pago: <strong>$350.00 MXN</strong></span>
+                    </div>
+                    <div class="success-detail-item">
+                        <span>📧</span>
+                        <span>Correo: <strong>plantel77@cobach.edu.mx</strong></span>
+                    </div>
+                    <div class="success-detail-item">
+                        <span>📞</span>
+                        <span>Teléfono: <strong>968-327-4126</strong></span>
+                    </div>
+                </div>
+                <p class="success-footer">¡Te esperamos en el COBACH Plantel 77!</p>
+            </div>
+            <button class="btn success-btn" id="closeSuccessModal">¡Entendido! 🚀</button>
+        </div>
+        <canvas id="confettiCanvas"></canvas>
+    </div>
+
+    <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="footer-container">
             <div class="footer-info">
@@ -217,7 +437,7 @@
             <div class="footer-socials">
                 <h4>¡Síguenos en Redes!</h4>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=100064649847158&locale=es_LA" class="social-link">Facebook</a>
+                    <a href="https://www.facebook.com/profile.php?id=61555975753959" class="social-link">Facebook</a>
                     <a href="https://www.instagram.com/popular/cobach-plantel-77/" class="social-link">Instagram</a>
                     <a href="https://www.tiktok.com/@cobachplantel77" class="social-link">TikTok</a>
                 </div>
