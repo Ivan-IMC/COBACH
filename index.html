@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COBACH 77 - José María Pino Suárez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar glass">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo COBACH 77" class="nav-logo">
+            <span class="logo-text">COBACH 77</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#instalaciones">Instalaciones</a></li>
+            <li><a href="#oferta">Oferta Educativa</a></li>
+            <li><button class="btn js-btn btn-nav" id="openInscripciones">Inscripciones 🚀</button></li>
+        </ul>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <canvas id="rainCanvas"></canvas>
+        
+        <div class="hero-content glass" id="heroCard">
+            <span class="badge">Plantel José María Pino Suárez, Chiapas</span>
+            <h1>Construye tu futuro hoy</h1>
+            <p>Formación académica de excelencia, deportes, cultura y el mejor ambiente estudiantil te esperan.</p>
+            <button class="btn js-btn action-btn" id="heroActionBtn">¡Inscríbete Ahora!</button>
+        </div>
+    </header>
+
+    <section id="instalaciones" class="section">
+        <h2>Nuestras Áreas e Instalaciones</h2>
+        <p class="subtitle">Haz <strong>doble clic</strong> en cualquier imagen para verla en pantalla completa.</p>
+        
+        <div class="carousel-3d-wrapper">
+            <div class="carousel-3d-container">
+                <div class="carousel-3d-item">
+                    <img src="img/salon1.jpg" alt="Aulas" class="carousel-img">
+                    <div class="carousel-caption">Aulas de Clases</div>
+                </div>
+                <div class="carousel-3d-item">
+                    <img src="img/salon5.jpg" alt="Aulas" class="carousel-img">
+                    <div class="carousel-caption">Salón de Ciencias</div>
+                </div>
+                <div class="carousel-3d-item">
+                    <img src="img/direccion.jpg" alt="Dirección Escolar" class="carousel-img">
+                    <div class="carousel-caption">Dirección Escolar</div>
+                </div>
+                <div class="carousel-3d-item">
+                    <img src="img/compu1.jpg" alt="Cómputo" class="carousel-img">
+                    <div class="carousel-caption">Aula de Cómputo</div>
+                </div>
+                <div class="carousel-3d-item">
+                    <img src="img/cancha1.jpg" alt="Deportes" class="carousel-img">
+                    <div class="carousel-caption">Cancha recreativa (Fútbol y Básquetbol)</div>
+                </div>
+                <div class="carousel-3d-item">
+                    <img src="img/Biblio.jpg" alt="Biblioteca" class="carousel-img">
+                    <div class="carousel-caption">Biblioteca y Zona de Estudio</div>
+                </div>
+                <div class="carousel-3d-item">
+                    <img src="img/AreVerd.jpg" alt="Explanada" class="carousel-img">
+                    <div class="carousel-caption">Áreas Verdes</div>
+                </div>
+                <div class="carousel-3d-item">
+                    <img src="img/campo.jpg" alt="Campo" class="carousel-img">
+                    <div class="carousel-caption">Campo Deportivo</div>
+                </div>
+                <div class="carousel-3d-item">
+                    <img src="img/deportes.jpg" alt="Clubes" class="carousel-img">
+                    <div class="carousel-caption">Clubes Deportivos</div>
+                </div>
+            </div>
+            <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
+            <button class="carousel-btn next-btn" id="nextBtn">&#10095;</button>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="fullImage" alt="Vista completa">
+    </div>
+
+    <section id="oferta" class="section alt-bg">
+        <h2>Lo que tenemos para ti</h2>
+        <p class="subtitle">Desarróllate en tus áreas favoritas y oportunidades de la actualidad.</p>
+        
+        <div class="zigzag-container">
+            <div class="zigzag-card">
+                <div class="circular-img-container">
+                    <img src="img/compu1.jpg" alt="Informática">
+                </div>
+                <div class="zigzag-text">
+                    <h3>Capacitación en Informática</h3>
+                    <p>A los estudiantes no concientes de las neuvas TICs, aprede los principios básicos y avanzados de la informática y ofimatica, lo que te
+                         permitirá ganar expresividad digital y habilidades tecnológicas esenciales para la continuación de tu desarrollo estudiantil y profesional.
+                    </p>
+                </div>
+            </div>
+
+            <div class="zigzag-card">
+                <div class="circular-img-container">
+                    <img src="img/natura.jpg" alt="Contabilidad">
+                </div>
+                <div class="zigzag-text">
+                    <h3>Actividades recreativas</h3>
+                    <p>Es bueno centrarse en las nuevas tecnologías, pero tambien el algo bueno prestar atención a lo natural.
+                        Disfruta de nuestras áreas verdes, espacios de convivencia y actividades al aire libre. ¡Un respiro para tu mente y cuerpo!
+                    </p>
+                </div>
+            </div>
+
+            <div class="zigzag-card">
+                <div class="circular-img-container">
+                    <img src="img/deportes.jpg" alt="Deportes">
+                </div>
+                <div class="zigzag-text">
+                    <h3>Clubes Deportivos</h3>
+                    <p>Forma parte de nuestros equipos de fútbol, básquetbol y recreativos. ¡Representa con orgullo al plantel en torneos estatales!</p>
+                </div>
+            </div>
+
+            <div class="zigzag-card">
+                <div class="circular-img-container">
+                    <img src="img/cultura.jpg" alt="Cultura">
+                </div>
+                <div class="zigzag-text">
+                    <h3>Talleres Culturales</h3>
+                    <p>Explora tu lado creativo en los talleres de danza folclórica, música, telleres recreativos, entre otros. Fomentamos nuestras tradiciones.</p>
+                </div>
+            </div>
+
+            <div class="zigzag-card">
+                <div class="circular-img-container">
+                    <img src="img/docentes.jpg" alt="Orientación">
+                </div>
+                <div class="zigzag-text">
+                    <h3>Orientación Educativa</h3>
+                    <p>Excelente apoyo en la comunidad docente. Acompañamiento psicopedagógico permanente para ayudarte a elegir tu carrera universitaria ideal y asegurar tu bienestar emocional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="inscripcionesModal" class="modal-form-overlay">
+        <div class="modal-form-box glass">
+            <span class="close-form-btn" id="closeInscripciones">&times;</span>
+            <h3>Formulario de Pre-Inscripción</h3>
+            <p class="form-desc">Completa tus datos para apartar tu lugar en el ciclo escolar 2026-2027.</p>
+            
+            <form id="formInscripcion">
+                <fieldset>
+                    <legend>Datos del Estudiante</legend>
+                    <div class="input-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" required placeholder="Ej. Juan Pérez López">
+                    </div>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="curp">CURP:</label>
+                            <input type="text" id="curp" required placeholder="18 caracteres" maxlength="18">
+                        </div>
+                        <div class="input-group">
+                            <label for="secundaria">Secundaria de Procedencia:</label>
+                            <input type="text" id="secundaria" required placeholder="Nombre de tu escuela">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Derecho a Examen y Ficha de Pago</legend>
+                    <div class="payment-info">
+                        <p><strong>Costo de la ficha:</strong> $350.00 MXN</p>
+                        <p class="note">⚠️ Llena los campos correspondientes.</p>
+                    </div>
+                    <div class="input-group">
+                        <label for="cardname">Nombre del Titular de la Tarjeta:</label>
+                        <input type="text" id="cardname" required placeholder="Como aparece en la tarjeta">
+                    </div>
+                    <div class="input-group">
+                        <label for="cardnumber">Número de Tarjeta:</label>
+                        <input type="text" id="cardnumber" required placeholder="0000 0000 0000 0000" maxlength="19">
+                    </div>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="exp">Fecha de Expiración:</label>
+                            <input type="text" id="exp" required placeholder="MM/AA" maxlength="5">
+                        </div>
+                        <div class="input-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="password" id="cvv" required placeholder="123" maxlength="3">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn js-btn submit-form-btn">Procesar Registro y Pago 💳</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h4>COBACH Plantel 77</h4>
+                <p>"José María Pino Suárez"</p>
+                <p class="location">📍 Domicilio Conocido, José María Pino Suárez, Chiapas, México.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto Directo</h4>
+                <p>📞 Teléfono: 968-327-4126</p>
+                <p>✉️ Correo: plantel77@cobach.edu.mx</p>
+                <p>⏰ Horario: Lunes a Viernes de 7:00 AM a 2:00 PM</p>
+            </div>
+            <div class="footer-socials">
+                <h4>¡Síguenos en Redes!</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100064649847158&locale=es_LA" class="social-link">Facebook</a>
+                    <a href="https://www.instagram.com/popular/cobach-plantel-77/" class="social-link">Instagram</a>
+                    <a href="https://www.tiktok.com/@cobachplantel77" class="social-link">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 COBACH Plantel 77.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
